@@ -16,7 +16,7 @@ end
 
 function linearapprox(x, y, f, grad_fn, xbar)
     f_x = f(xbar...);
-    ∇f_x = grad_2(xbar...);
+    ∇f_x = grad_fn(xbar...);
 
     surface(x, y, f, camera=(-30, 30), c=:BuGn_3, legend=false)
     contour!(x, y, f)
